@@ -59,14 +59,14 @@ function styles() {
         .pipe(browserSync.stream())
 }
 
-function libs() {
-    return src([
-        'node_modules/normalize.css/normalize.css'
-    ])
-    .pipe(concat('_libs.scss'))
-    .pipe(dest('app/scss'))
-    .pipe(browserSync.stream())
-}
+// function libs() {
+//     return src([
+//         // 'node_modules/normalize.css/normalize.css'
+//     ])
+//     .pipe(concat('_libs.scss'))
+//     .pipe(dest('app/scss'))
+//     .pipe(browserSync.stream())
+// }
 
 function build() {
     return src([
@@ -86,7 +86,7 @@ function watching() {
 
 
 
-exports.libs = libs;
+// exports.libs = libs;
 exports.styles = styles;
 exports.watching = watching;
 exports.browsersync = browsersync;
@@ -97,4 +97,4 @@ exports.cleanDist = cleanDist;
 
 
 exports.build = series(cleanDist, images, build);
-exports.default = parallel(libs, scripts, browsersync, watching); 
+exports.default = parallel( scripts, browsersync, watching); 
