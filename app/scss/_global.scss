@@ -54,6 +54,10 @@ select {
 
 a{
   text-decoration: none;
+  color: $info;
+  @extend %rubik-400;
+  font-size: 14px;
+  line-height: 24px;
 }
 
 body{
@@ -63,18 +67,53 @@ body{
   line-height: 30px;
 }
 
-
-.container{
-  max-width: 1230px;
+.container-basic{
+  max-width: 1170px;
   padding: 0 15px;
   margin: 0 auto;
 } 
 
-.header__container{
+.container{
   max-width: 1800px;
-  padding: 0 75px;
+  padding: 0 15px;
   margin: 0 auto;
 }
 
 
+.logo{
+  display: flex;
+  align-items: center;
+  &__title{
+    padding-left: 10px;
+    color: $accent;
+    @extend %rubik-500;
+    font-size: 36px;
+    line-height: 58px;
+  }
+}
 
+
+
+.title{
+  @extend %dmsans-700;
+  font-size: 36px;
+  color: $title;
+  line-height: 30px;
+}
+
+.filter-btn{
+  text-align: center;
+  margin-bottom: 78px;
+  &__list{
+  cursor: pointer;
+  font-size: 16px;
+  color: $menu;
+  border: none;
+  background-color: #fff;
+  @extend %dmsans-700;
+  }
+}
+
+.filter-btn__list.mixitup-control-active{
+  color: $title;
+}

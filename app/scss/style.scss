@@ -1,27 +1,19 @@
 @import "vars";
 @import "global";
 @import "fonts";
+@import "libs";
 
 
 .header{
-    &__inner{
-        padding: 50px 0;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-    &__logo-link{
-      display: flex;
-      align-items: center;
-    }
-    &__logo-title{
-        padding-left: 10px;
-        color: $accent;
-        @extend %rubik-500;
-        font-size: 36px;
-        line-height: 58px;
-    }
+  &__inner{
+    padding: 50px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
+}
+
+
 
 
 .menu{
@@ -49,12 +41,26 @@
     padding-left: 47px;
   }
   &__link-bg{
+    position: relative;
     padding: 14px 40px;
     display: flex;
     align-items: center;
     margin-left: 23px;
     background-color: #fcd7b6;
     border-radius: 50px 50px 50px 50px;
+  }
+  &__link-search{
+    position: absolute;
+    top: 17px;
+    bottom: 0;
+    left: 17px;
+    right: 0;
+  }
+  &__search{
+    width: 50px;
+    height: 50px;
+    background-color: #edf1f4;
+    border-radius: 50%;
   }
   &__num{
     position: absolute;
@@ -83,21 +89,122 @@
 }
 
 
+
+.footer-top{
+  display: flex;
+  justify-content: space-between;
+  padding: 90px 0 75px;
+  border-bottom: 1px solid #dae4e9;
+  color: $info;
+  &__contact{
+    max-width: 200px;
+    line-height: 24px;
+    margin-right: 50px;
+  }
+  &__item{
+    span{
+      text-transform: uppercase;
+    }
+  }
+  &__address,
+  &__phone,
+  &__email{
+    display: block;
+    margin-bottom: 20px;
+  }
+  &__address{
+    margin-top: 31px;
+  }
+  &__nav{
+    width: 170px;
+    margin-right: 100px;
+  }
+  &__title{
+    color: $info-title;
+    @extend %dmsans-700;
+    padding-top: 21px;
+    font-size: 16px;
+    line-height: 21px;
+    margin-bottom: 26px;
+    text-transform: uppercase;
+  }
+  &__link{
+    margin-bottom: 15px;
+    display: block;
+  }
+  &__form{
+    max-width: 270px;
+    width: 100%;
+  
+  }
+  &__text{
+    margin-bottom: 40px;
+  }
+  &__form-input{
+    background-color: #fef7f0;
+    border: none;
+    max-width: 170px;
+    width: 100%;
+    padding-left: 14px;
+    padding: 7px 16px;
+    &::placeholder{
+      color: $email-adress;
+      font-size: 12px;
+      @extend %dmsans-400;
+    }
+  }
+  &__form-btn{
+    line-height: 21px;
+    background-color: $price-subtitle;
+    border: none;
+    padding: 12px 16px;
+    color: #fff;
+    margin-left: -3px;
+  }
+}
+
+.footer-bottom{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 90px;
+  &__list{
+    display: flex;
+  }
+  &__text{
+    line-height: 32px;
+  }
+  &__item + .footer-bottom__item{
+    margin-left: 13px;
+  }
+}  
+li.footer-bottom__item + li.footer-bottom__item::before{
+    content: '';
+    border-left: 1px solid $info;
+    height: 20px;
+    top: 0;
+    bottom: 0;
+    padding-left: 13px;
+  }
+
+
+
 .slider{    
-  background-image: url(../images/slider-bg.jpg);
+  &__inner-items{
     background-size: cover;
+    background-image: url(../images/slider-bg.jpg);
     background-position: center center;
     background-repeat: no-repeat;
     min-height: 100%;
-    margin: 0 75px 54px;
-  &__inner{
-    max-width: 1770px;
-    margin: 0 auto;
-    padding: 0 15px;
   }
   &__inner-item{
-    margin-left: 300px;
-    padding: 220px 0 200px;
+    padding: 100px 0 91px;
+    display: flex !important;
+    justify-content: space-between;
+  }
+  &__inner-content{
+    padding-top: 128px;
+    padding-left: 300px;
   }
   &__inner-title{
     @extend %rubik-500;
@@ -153,6 +260,14 @@
   cursor: pointer;
   font-size: 11px;
   line-height: 9px;  
+  background-color: #fde3cc;
+  color: $products-title;
+}
+.slick-dots .slick-active{
+    button{
+      background-color: #fff;
+    }
+  
 }
 
 .slick-dots li{
@@ -167,59 +282,153 @@
 
 
 .benefits{
-  margin-bottom: 400px;
+  margin-bottom: 130px;
   &__inner{
-    max-width: 1480px;
-    margin: 0 auto;
-  }
-  &__items{
+    background-color: $bg;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
   }
   &__item{
-    max-width: 247px;
-    padding: 0 15px;
-    position: relative;
-    margin: 0 52px;
+    display: flex;
+    padding: 56px 160px 47px;
+  }
+  &__item + .benefits__item{
+    border-left: 1px solid #e8e4df;
+  }
+  &__item-box{
+    padding-left: 15px;
+    width: 230px;
   }
   &__item-title{
     font-size: 18px;
-    line-height: 40px;
+    line-height: 20px;
+    margin-bottom: 15px;
     color: $benefits;
     @extend %dmsans-700;
-    margin-bottom: 15px;
   }
   &__item-descr{
     font-size: 16px;
     line-height: 30px;
     @extend %dmsans-400;
   }
-}
-.benefits__item::after{
-  content: '';
-  position: absolute;
-  background-repeat: no-repeat;
-  width: 50px;
-  height: 50px;
-  top: 15px;
-  left: -52px;
+  &__item-supports{
+    width: 209px;
+  }
 }
 
 
 
-.benefits__item.benefits__item-supports::after{
-  background-image: url(../images/benefits__icon-1.svg);
+
+
+.products{
+  &__items{
+    background-color: #f9f9f9;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 40px 30px;
+    
+  }
+  &__title{
+    margin-bottom: 20px;
+    text-align: center;
+  }
 }
 
 
-.benefits__item::after{
-  background-image: url(../images/benefits__icon-2.svg);
+.products-item{
+  width: 270px;
+  background-color: #fff;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  padding-top: 30px;
+  &:hover{
+    .products-item__link-box{
+      transform: translateY(0);
+    }
+  }
+  img{
+    width: 186px;
+    height: 195px;
+  }
+  &__images{
+    display: inline-block;
+    margin-bottom: 70px;
+  }
+  &__img-box{
+    position: relative;
+    overflow: hidden;
+    transition: all .3s;
+  }
+  &__link-box{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: absolute;
+    transition: all .3s;
+    transform: translateY(300%);
+    bottom: 50px;
+  }
+  &__link{
+    background-color: #fff;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+    border: none;
+    transition: all .3s;
+    &:hover{
+      background-color: #a3bac7;
+      path{
+        fill: rgb(255, 255, 255);
+      }
+    }
+  } 
+  &__link-search{
+
+    position: absolute;
+    top: 14px;
+    left: 25px;
+
+    
+  }
+  &__link {
+    margin-left: 13px;
+  }
+  &__title{
+    font-size: 16px;
+    line-height: 40px;
+    color: $products-title;
+    @extend %dmsans-500;
+  }
+  &__num{
+    font-size: 16px;
+    line-height: 40px;
+    color: #a3bbc8;
+    @extend %dmsans-700;
+    margin-bottom: 10px;
+  }
 }
 
 
-.benefits__item.benefits__item-credit::after{
-  background-image: url(../images/benefits__icon-3.svg);
+
+.products-item__link-btn{
+  position: relative;
+  svg{
+    position: absolute;
+    top: 14px;
+    left: 12px;
+    right: 0;
+  } 
 }
+
+
+
+
+
 
 
 
