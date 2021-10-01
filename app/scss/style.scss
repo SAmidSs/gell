@@ -290,7 +290,7 @@ li.footer-bottom__item + li.footer-bottom__item::before{
   }
   &__item{
     display: flex;
-    padding: 56px 160px 47px;
+    padding: 56px 133px 47px;
   }
   &__item + .benefits__item{
     border-left: 1px solid #e8e4df;
@@ -540,6 +540,9 @@ li.footer-bottom__item + li.footer-bottom__item::before{
     justify-content: space-between;
     align-items: center;
     margin-bottom: 45px;
+  }
+  &__title{
+    z-index: 11;
   }
   &__btn{
     color: $title-descr;
