@@ -233,7 +233,7 @@ li.footer-bottom__item + li.footer-bottom__item::before{
     &::before{
       content: '';
       position: absolute;
-      background-image: url(../images/slider-btn.svg);
+      background-image: url(../images/icons/slider-btn.svg);
       width: 22px;
       height: 9px;
       right: 18px;
@@ -518,6 +518,114 @@ li.footer-bottom__item + li.footer-bottom__item::before{
     z-index: -1;
   }
 }
+
+.wrapper{
+  background-color: $bg;
+}
+
+.news{
+  margin-bottom: 15px;
+  position: relative;
+  &::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 59%;
+    background-color: #fff;
+  }
+  &__top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 45px;
+  }
+  &__btn{
+    color: $title-descr;
+    font-size: 16px;
+    @extend %dmsans-700;
+    padding-right: 25px;
+    position: relative;
+    &::after{
+      content: '';
+      position: absolute;
+      background-image: url(../images/icons/angel-right.svg);
+      width: 5px;
+      height: 11px;
+      right: 0;
+      top: 6px;
+    }
+  }
+  &__items{
+    display: flex;
+    justify-content: space-between;
+    
+  }
+  &__item{
+    max-width: 370px;
+    width: 100%;
+    background-color: #fff;
+    position: relative;
+  }
+  &__item-img{
+    margin-bottom: 35px;
+  }
+  &__item-text{
+    font-size: 18px;
+    @extend %dmsans-500;
+    color: $title-descr;
+    width: 320px;
+    padding-bottom: 15px;
+    margin: 0 auto 22px;
+    border-bottom: 1px solid #e0e0e0;
+  }
+  &__item-info{
+    display: flex;
+    align-items: center;
+    padding: 0 30px 26px;
+  }
+  &__item-author{
+    margin-left: 28px;
+  }
+}
+
+
+.news__item--new{
+  &::before{
+    content: 'NEWS';
+    position: absolute;
+    line-height: 20px;
+    color: #fff;
+    font-size: 14px;
+    padding: 7px 35px;
+    border-radius: 50px 50px;
+    background-color: $price-subtitle;
+    top: 50%;
+    left: 28px;
+  }
+}
+
+
+
+
+
+.partners{
+  padding: 78px 0 88px;
+  background-color: $bg;
+  &__list{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+}
+
+
+
+
+
+
+
 
 
 

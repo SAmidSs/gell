@@ -117,3 +117,22 @@ body{
 .filter-btn__list.mixitup-control-active{
   color: $title;
 }
+
+
+.video{
+  margin-bottom: 110px;
+  &__inner{
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 500px;
+    width: 100%;
+    position: relative;
+  }
+  &__btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 190px;
+    padding-top: 190px;
+  }
+}
