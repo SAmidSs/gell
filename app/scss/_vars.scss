@@ -26,6 +26,10 @@ $menu: #8b8b8b;
     font-family: 'DMSans-Bold', sans-serif;
     font-weight: 700;
 }
+%rubik-400{
+    font-family: 'Rubik-Light', sans-serif;
+    font-weight: 300;
+}
 
 %rubik-400{
     font-family: 'Rubik-Regular', sans-serif;
@@ -35,4 +39,9 @@ $menu: #8b8b8b;
 %rubik-500{
     font-family: 'Rubik-Medium', sans-serif;
     font-weight: 500;
+}
+
+%poppins-700{
+    font-family: 'Poppins-Bold', sans-serif;
+    font-weight: 700;
 }
