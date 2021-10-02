@@ -17,6 +17,7 @@
 
 
 .menu{
+  margin-left: 200px;
   &__list-items{
     display: flex;
   }
@@ -38,7 +39,7 @@
     position: relative;
   }
   &__link + .user-nav__link{
-    padding-left: 47px;
+    margin-left: 56px;
   }
   &__link-bg{
     position: relative;
@@ -61,6 +62,26 @@
     height: 50px;
     background-color: #edf1f4;
     border-radius: 50%;
+  }
+  &__btn{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: $price-subtitle;
+  }
+  &__menu{
+    width: 50px;
+    height: 50px;
+    background-color: $price-subtitle;
+    border-radius: 50%;
+    margin-left: 17px;
+  }
+  &__link-menu{   
+    position: absolute;
+    top: 15px;
+    bottom: 0;
+    left: 15px;
+    right: 0;
   }
   &__num{
     position: absolute;
@@ -85,8 +106,23 @@
     line-height: 27px;
     color: #fff;
     top: -8px;
-    left: 24px;
+    left: -28px;
+    cursor: default;
 }
+
+
+.top{
+  background-color: #edf1f4;
+  padding: 35px 0;
+  text-align: center;
+  &__title{
+    font-size: 36px;
+    line-height: 24px;
+    color: $data;
+    margin-bottom: 10px;
+  }
+}
+
 
 
 
@@ -625,7 +661,58 @@ li.footer-bottom__item + li.footer-bottom__item::before{
 
 
 
-
+.modal{
+  padding-top: 120px;
+  max-width: 570px;
+  margin: 0 auto 120px;
+  &__form{
+    border-bottom: 1px solid #f6f6f6;
+    margin-bottom: 25px;
+  }
+  &__label{
+    margin-bottom: 30px;
+    color: $accent;
+    display: block;
+  }
+  &__input{
+    display: block;
+    width: 100%;
+    border: 1px solid #f6f6f6;
+    height: 60px;
+    padding-top: 15px;
+  }
+  &__btn{
+    display: block;
+    font-size: 18px;
+    @extend %rubik-500;
+    padding: 20px 0;
+    width: 100%;
+  }
+  &__btn--login{
+    border: none;
+    background-color: $price-subtitle;
+    cursor: pointer;
+    margin-bottom: 35px;
+    color: #fff;
+  }
+  &__label--error{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__register{
+    color: $accent;
+    text-align: center;
+    display: block;
+    width: 100%;
+  }
+  &__btn--account{
+    border: 1px solid $price-subtitle;
+    text-align: center;
+    margin-top: 25px;
+    color: $products-title;
+  }
+}
 
 
 
