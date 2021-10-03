@@ -167,3 +167,10 @@ body{
     }
   }
 }
+
+
+.about-title{
+  @extend %dmsans-700;
+  font-size: 36px;
+  line-height: 32px;
+}
