@@ -6,7 +6,6 @@ $(function () {
         slidesToShow: 1,
     });    
     
-    var mixer = mixitup('.products__items');
     var containerEl1 = document.querySelector('[data-ref="mix-1"]');
     var containerEl2 = document.querySelector('[data-ref="mix-2"]');
 
