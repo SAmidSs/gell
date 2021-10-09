@@ -355,7 +355,11 @@ li.footer-bottom__item + li.footer-bottom__item::before{
 
 
 
-
+.products-container{
+  max-width: 1270px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
 
 .products{
   margin-bottom: 190px;
@@ -363,7 +367,6 @@ li.footer-bottom__item + li.footer-bottom__item::before{
     background-color: #f9f9f9;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-gap: 40px 30px;
     
   }
   &__title{
@@ -382,7 +385,9 @@ li.footer-bottom__item + li.footer-bottom__item::before{
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
+  margin: 20px;
   padding-top: 30px;
+  padding-bottom: 10px;
   &:hover{
     .products-item__link-box{
       transform: translateY(0);
@@ -427,12 +432,9 @@ li.footer-bottom__item + li.footer-bottom__item::before{
     }
   } 
   &__link-search{
-
     position: absolute;
-    top: 14px;
-    left: 25px;
-
-    
+    top: 13px;
+    left: 26px;
   }
   &__link {
     margin-left: 13px;
@@ -965,17 +967,224 @@ li.footer-bottom__item + li.footer-bottom__item::before{
 }
 
 
+.shop{
+  padding: 115px 0;
+  &__inner{
+    display: flex;
+  }
+  &__filters{
+    width: 370px;
+    margin-right: 30px;
+  }
+}
+
+
+
+
+.filter{
+  &__title{
+    font-size: 18px;
+    color: $products-title;
+    margin-bottom: 30px;
+    position: relative;
+    display: inline-block;
+    padding-right: 56px;
+    @extend %dmsans-700;
+    text-transform: uppercase;
+    &::after{
+      content: '';
+      position: absolute;
+      width: 40px;
+      height: 1px;
+      background-color: $price-subtitle;
+      right: 0;
+      top: 14px;
+    }
+  }
+  &__title-price{
+    margin-bottom: 20px;
+  }
+}
+
+.filter-checkbox{
+  @extend %rubik-400;
+  font-size: 16px;
+  color: $products-title;
+  border-radius: 4px;
+}
+
+.filter-category{
+  margin-bottom: 60px;
+  &__label{
+    cursor: pointer;
+    margin-bottom: 10px;
+    display: block;
+  }
+  &__input{
+    @extend %checkbox-hidden;
+    &:checked + .filter-category__checkbox{
+      background-color: #edf1f4;
+    }
+  }
+  &__checkbox{
+    padding: 8px 220px 8px 15px;
+    position: relative;
+    &::after{
+      content: '';
+      position: absolute;
+      width: 5px;
+      height: 10px;
+      right: 23px;
+      top: 18px;
+      background-image: url(../images/icons/angle-right__product.svg);
+    }
+  }
+}
+
+
+
+
+.filter-price{
+  margin-bottom: 60px;
+  &__label{
+    display: block;
+      padding-top: 20px;
+  } 
+  &__btn{
+      border: none;
+      cursor: pointer;
+  }
+  &__box{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+  }
+  &__num{
+    font-size: 17px;
+    color: $products-title;
+    @extend %rubik-400;
+  }
+}
+.irs--flat .irs-line {
+  top: 13px;
+  height: 2px;
+  background-color: #c2d2db;
+  border-radius: 0;
+}
+
+.irs--flat .irs-handle {
+  top: 6px;
+  width: 15px;
+  height: 15px;
+  background-color: $price-subtitle;
+}
+
+.irs--flat .irs-handle>i:first-child {
+  display: none;
+}
+
+.irs--flat .irs-bar {
+  top: 13px;
+  height: 3px;
+  background-color: $price-subtitle;
+}
+
+.irs--flat .irs-from, .irs--flat .irs-to, .irs--flat .irs-single{
+  display: none;
+}
+
+.irs--flat .irs-min, .irs--flat .irs-max{
+  display: none;
+}
+
+.irs--flat{
+  height: 13px;
+}
+
+
+
+.filter-brand{
+  margin-bottom: 60px;
+  &__label{
+    cursor: pointer;
+    margin-bottom: 10px;
+    display: block;
+  }
+  &__input{
+    @extend %checkbox-hidden;
+    &:checked + .filter-brand__checkbox{
+      background-color: #edf1f4;
+      .filter-brand__num{
+        color: $products-title;
+      }
+    }
+  }
+  &__checkbox{
+    padding: 8px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__num{
+    color: #b3b3b3;
+    width: 36px;
+    text-align: center;
+  }
+}
 
 
 
 
 
 
+.filter-products{
+  &__item{
+    display: flex;
+    margin-bottom: 25px;
+  }
+  &__item-img{
+    border: 1px solid #f2f2f2;
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+  }
+  &__images{
+    display: block;
+    margin: 0 auto;
+  }
+  &__item-info{
+    margin-left: 20px;
+  }
+  &__item-title{
+    font-size: 14px;
+    line-height: 16px;
+    margin-bottom: 13px;
+    color: #333333;
+    @extend %rubik-400;
+  }
+  &__item-num{
+    font-size: 14px;
+    line-height: 15px;
+    color: #333333;
+    @extend %rubik-400;
+    margin-top: 13px;
+  }
+}
 
+.star{
+  display: flex;
+}
 
+.jq-ry-container{
+  padding: 0;
+}
 
-
-
+.shop__content{
+  .products__items{
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
 
 
 
