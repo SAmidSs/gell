@@ -628,6 +628,7 @@ li.footer-bottom__item + li.footer-bottom__item::before{
     width: 320px;
     padding-bottom: 15px;
     margin: 0 auto 22px;
+    display: block;
     border-bottom: 1px solid #e0e0e0;
   }
   &__item-info{
@@ -976,7 +977,7 @@ li.footer-bottom__item + li.footer-bottom__item::before{
 
 
 .shop{
-  padding: 115px 0;
+  padding: 115px 0 0;
   &__inner{
     display: flex;
   }
@@ -1194,6 +1195,106 @@ li.footer-bottom__item + li.footer-bottom__item::before{
   }
 }
 
+
+
+
+
+
+
+
+
+.product-item{
+  margin-bottom: 42px;
+  &__inner{
+    margin-left: 35px;
+    display: flex;
+    color: #333333;
+  }
+  &__inner-img{
+    background-color: #fefefe;
+    border: 1px solid #f2f2f2;
+    margin-right: 62px;
+    width: 370px;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__content{
+    width: 390px;
+    margin: 140px 0 70px;
+  }
+  &__title{
+    font-size: 40px;
+    line-height: 36px;
+    margin-bottom: 20px;
+    @extend %rubik-400;
+  }
+  &__num{
+    font-size: 30px;
+    line-height: 45px;
+    margin-bottom: 30px;
+  }
+  &__text{
+    font-size: 16px;
+    line-height: 30px;
+    color: $products-title;
+    margin-bottom: 30px;
+    @extend %rubik-400;
+  }
+  &__btn{
+    text-transform: uppercase;
+    height: 50px;
+    width: 205px;
+    border: none;
+    background-color: $price-subtitle;
+    color: #fff;
+    font-size: 15px;
+    line-height: 30px;
+    @extend %rubik-400;
+    cursor: pointer;
+    display: none;
+  }
+}
+.products-item__link-btn--list{
+  border-radius: 0px;
+  margin-left: 0;
+}
+
+.products-item__link-btn--list + .products-item__link-btn--list{
+  margin-left: 5px;
+}
+
+
+.star-list{
+  margin-bottom: 24px;
+  padding-left: 2px;
+}
+
+.product__item-btn__items{
+  height: 50px;
+  display: none;
+}
+
+.product-item__btn--active{
+  display: block;
+}
+.product-item__btn--active + .product__item-btn__items{
+  display: none;
+}
+
+
+.product__item-btn__items--active{
+  display: block;
+}
+
+
+
+.pagination__product{
+  margin-bottom: 119px;
+  justify-content: flex-start;
+  margin-left: 21px;
+}
 
 
 
