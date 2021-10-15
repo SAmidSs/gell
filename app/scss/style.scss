@@ -1259,10 +1259,25 @@ li.footer-bottom__item + li.footer-bottom__item::before{
 .products-item__link-btn--list{
   border-radius: 0px;
   margin-left: 0;
+  background-color: #a3bac7;
+  path{
+    fill: rgb(255, 255, 255);
+  }
 }
+
 
 .products-item__link-btn--list + .products-item__link-btn--list{
   margin-left: 5px;
+  background-color: #fff;
+  path{
+    fill: rgb(163, 187, 200);
+  }
+  &:hover{
+    background-color: #a3bac7;
+    path{
+      fill: rgb(255, 255, 255);
+    }
+  }
 }
 
 
@@ -1279,14 +1294,16 @@ li.footer-bottom__item + li.footer-bottom__item::before{
 .product-item__btn--active{
   display: block;
 }
-.product-item__btn--active + .product__item-btn__items{
-  display: none;
-}
-
 
 .product__item-btn__items--active{
   display: block;
 }
+
+.product__item-btn__items + .product-item__btn--active{
+  display: none;
+}
+
+
 
 
 
