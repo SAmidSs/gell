@@ -1,5 +1,25 @@
 
 $(function () {
+
+    $('.product-one__item-num').styler();
+
+
+    $('.product-slide__thumb').slick({
+        asNavFor: '.product-slide__big',
+        focusOnSelect: true,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        draggable: false,
+        vertical: true,
+    });
+    $('.product-slide__big').slick({
+        asNavFor: '.product-slide__thumb',
+        draggable: false,
+        fade: true,
+        arrows: false
+    });
+
+
     // document.querySelector('.product-item__btn--active').addEventListener('click',function(e){
     //     if (e.target.classList.contains('product-item__btn--active')) alert(e.target.classList.contains('product__item-btn__items--active'))
     //   })
