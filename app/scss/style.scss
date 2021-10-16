@@ -1224,7 +1224,7 @@ li.footer-bottom__item + li.footer-bottom__item::before{
   }
   &__content{
     width: 500px;
-    margin: 30px 0 70px;
+    margin: 30px 0 0;
   }
   &__title{
     font-size: 40px;
@@ -1365,11 +1365,12 @@ li.footer-bottom__item + li.footer-bottom__item::before{
 
 
 .product{
-  padding: 120px 0;
+  padding: 120px 0 0;
 }
 
 
 .product-one{
+  margin-bottom: 70px;
   &__inner{
     display: flex;
   }
