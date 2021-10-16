@@ -1,6 +1,17 @@
 
 $(function () {
 
+    $('.product-tabs__top-item').on('click', function(e){
+        e.preventDefault();
+        $('.product-tabs__top-item').removeClass('product-tabs__top-item--active');
+        $(this).addClass('product-tabs__top-item--active');
+
+
+        $('.product-tabs__content-item').removeClass('product-tabs__contnet-item--active');
+        $($(this).attr('href')).addClass('product-tabs__contnet-item--active');
+    });
+
+
     $('.product-one__item-num').styler();
 
 
@@ -24,16 +35,21 @@ $(function () {
     //     if (e.target.classList.contains('product-item__btn--active')) alert(e.target.classList.contains('product__item-btn__items--active'))
     //   })
 
-    $('.product-item__btn--active').on('click', function(){
-        $('.product-item__btn--active').removeClass('product-item__btn--active');
-        $('.product__item-btn__items').toggleClass('product__item-btn__items--active');
+    $('.product-item__btn').on('click', function(){
+        $(this).addClass('product-item__btn--active');
+        $('.product__item-box').removeClass('product__item-box--active')
+    });
+
+    $('.product__item-box').on('click', function(){
+        $(this).addClass('product__item-box--active');
+        $('.product-item__btn').removeClass('product-item__btn--active');
     });
 
 
-    $('.products-item__link-btn--list').on('click', function(){
-        $('.product-item__btn').toggleClass('product-item__btn--active')
-        $('.product__item-btn__items').removeClass('product__item-btn__items--active')
-    });
+    // $('.products-item__link-btn--list').on('click', function(){
+    //     $('.product-item__btn').toggleClass('product-item__btn--active')
+    //     $('.product__item-btn__items').removeClass('product__item-btn__items--active')
+    // });
 
     $('.star').rateYo({
         starWidth: '11px',
