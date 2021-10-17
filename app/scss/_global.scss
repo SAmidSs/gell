@@ -199,6 +199,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: all .3s;
     &:hover{
       background-color: $price-subtitle;
       color: #f9fafb;
