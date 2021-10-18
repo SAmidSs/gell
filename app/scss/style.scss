@@ -1042,6 +1042,7 @@ li.footer-bottom__item + li.footer-bottom__item::before{
     position: relative;
     display: inline-block;
     padding-right: 56px;
+    padding-top: 0;
     @extend %dmsans-700;
     text-transform: uppercase;
     &::after{
@@ -1094,7 +1095,26 @@ li.footer-bottom__item + li.footer-bottom__item::before{
   }
 }
 
-
+.filter-category.filter__title{
+      font-size: 18px;
+    color: $products-title;
+    margin-bottom: 30px;
+    position: relative;
+    display: inline-block;
+    padding-right: 56px;
+    padding-top: 0;
+    @extend %dmsans-700;
+    text-transform: uppercase;
+    &::after{
+      content: '';
+      position: absolute;
+      width: 40px;
+      height: 1px;
+      background-color: $price-subtitle;
+      right: 0;
+      top: 14px;
+    }
+}
 
 
 .filter-price{
@@ -1773,7 +1793,69 @@ li.footer-bottom__item + li.footer-bottom__item::before{
 }
 
 
-
+.blog-one{
+  padding: 120px 0 120px;
+  h2{
+    font-size: 36px;
+    color: #333333;
+    margin-bottom: 38px;
+  }
+  h3,h4{
+    line-height: 30px;
+    color: $products-title;
+    margin-bottom: 30px;
+    @extend %rubik-500;
+  }
+  h3{
+    font-size: 18px;
+    padding-top: 30px;
+    @extend %rubik-700;
+  }
+  h4{
+    @extend %rubik-700;
+    font-size: 16px;
+    max-width: 830px;
+  }
+  p{
+    color: $products-title;
+    font-size: 16px;
+    margin-bottom: 40px;
+    width: 800px;
+  }
+  blockquote{
+    max-width: 835px;
+    color: $products-title;
+    font-size: 16px;
+    @extend %rubik-400;
+    padding: 25px 90px 25px 45px;
+    border-left: 7px solid $price-subtitle;
+    background-color: #edf1f4;
+    margin-bottom: 47px;
+  }
+  .sub-blockquote{
+    margin-top: 10px;
+    display: block;
+    position: relative;
+    padding-left: 40px;
+    &::before{
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 13px;
+      width: 20px;
+      height: 4px;
+      background-color: $price-subtitle;
+    }
+  }
+  &__left-img{
+    float: left;
+    margin-right: 30px;
+    margin-bottom: 10px;
+  }
+  p.blog-one__text{
+    color: #565872;
+  }
+}
 
 
 
