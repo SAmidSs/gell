@@ -94,3 +94,14 @@
          url(../fonts/Poppins-Bold.woff2) format('woff');
     font-display: swap;
 }
+
+
+@font-face{
+    font-family: 'Nunito-Bold', sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    src: local('Nunito-Bold'),
+         url(../fonts/Nunito-Bold.woff2) format('woff2'),
+         url(../fonts/Nunito-Bold.woff2) format('woff');
+    font-display: swap;
+}
