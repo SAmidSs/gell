@@ -2094,6 +2094,100 @@ li.footer-bottom__item + li.footer-bottom__item::before{
 
 
 
+.contact{
+  padding: 120px 0;
+  &__top{
+    text-align: center;
+    margin-bottom: 70px;
+  }
+  &__subtitle{
+    font-size: 16px;
+    line-height: 20px;
+    color: $price-subtitle;
+  }
+  &__title{
+    @extend %dmsans-700;
+    font-size: 36px;
+    line-height: 57px;
+    color: #436372;
+  }
+  &__items{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 120px;
+  }
+  &__item{
+    width: 370px;
+    height: 380px;
+    background-color: #fbfbfb;
+    align-items: center;
+    border: 1px solid #fff;
+    margin-left: 30px;
+    &:hover{
+      border: 1px solid $price-subtitle;
+      .contact__box{
+        background-color: $price-subtitle;
+        path{
+          fill: rgb(255, 255, 255);
+        }
+      }
+    }
+  }
+  &__box{
+    width: 80px;
+    height: 80px;
+    background-color: #fff;
+    border-radius: 20px;
+    margin: 70px auto 60px;
+  }
+  &__box-icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+  }
+  &__info{
+    text-align: center;
+  }
+  &__info-title{
+    color: #222222;
+    @extend %dmsans-700;
+    font-size: 20px;
+    line-height: 26px;
+    margin-bottom: 20px;
+  }
+  &__info-link{
+    display: inline-block;
+    font-size: 16px;
+    color: #565872;
+    @extend %rubik-400;
+  }
+  &__info-address{
+    width: 170px;
+    margin: 0 auto;
+  }
+}
+
+.contact-form{
+  width: 630px;
+  &__textarea{
+    width: 620px;
+    position: relative;
+  }
+  &__input {
+    width: 300px;
+    & + .contact-form__input{
+      margin-left: 50px;
+
+    }
+  }
+}
+// .contact-form__input + .contact-form__input{
+//   margin-left: 15px;
+//   width: 40px;
+// } 
+
 
 
 
