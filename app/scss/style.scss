@@ -10,6 +10,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
   }
   &__logo-title{
     font-size: 36px;
@@ -27,6 +28,9 @@
   margin-left: 105px;
   &__list-items{
     display: flex;
+  }
+  &__btn{
+    display: none;
   }
   &__list-item{
     padding-left: 36px;
