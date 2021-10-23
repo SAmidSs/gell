@@ -128,7 +128,7 @@
   text-align: center;
   &__title{
     font-size: 36px;
-    line-height: 24px;
+    line-height: 34px;
     color: $data;
     margin-bottom: 10px;
     @extend %rubik-400;
@@ -579,6 +579,8 @@ li.footer-bottom__item + li.footer-bottom__item::before{
     height: 245px;
     width: 370px;
     padding: 40px 0 40px 15px;
+    background-color: #f8f8f8;
+    z-index: 0;
   }
   &__item-title{
     @extend %dmsans-700;
@@ -620,6 +622,7 @@ li.footer-bottom__item + li.footer-bottom__item::before{
     justify-content: space-between;
     align-items: center;
     margin-bottom: 45px;
+    flex-wrap: wrap;
   }
   &__title{
     z-index: 11;
@@ -2005,6 +2008,7 @@ li.footer-bottom__item + li.footer-bottom__item::before{
     display: flex;
     justify-content: space-between;
     margin-bottom: 20px;
+    position: relative;
   }
   &__input{
     width: 400px;
@@ -2023,7 +2027,7 @@ li.footer-bottom__item + li.footer-bottom__item::before{
     width: 820px;
     height: 120px;
     border: 1px solid #e5e5e5;
-    padding: 15px 35px 0 20px;
+    padding: 15px 53px 0 20px;
     resize: none;
     margin-bottom: 35px;
     &::placeholder{
@@ -2085,9 +2089,10 @@ li.footer-bottom__item + li.footer-bottom__item::before{
   &::after{
     background-image: url(../images/icons/comments-text.svg);
     width: 18px;
-    height: 15px;
-    right: 19px;
+    height: 14px;
+    right: 20px;
     top: -128px;
+    z-index: 5;
   }
 }
 
@@ -2203,6 +2208,14 @@ li.footer-bottom__item + li.footer-bottom__item::before{
   &__btn{
     border-radius: 4px;
   }
+}
+.contact-form__text {
+  position: absolute;
+  width: 18px;
+  height: 14px;
+  right: 29px;
+  top: 90px;
+  z-index: 5;
 }
 // .contact-form__input + .contact-form__input{
 //   margin-left: 15px;
