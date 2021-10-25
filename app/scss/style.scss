@@ -1706,6 +1706,7 @@ li.footer-bottom__item + li.footer-bottom__item::before{
     position: absolute;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding: 0 22px;
     font-size: 12px;
     line-height: 30px;
