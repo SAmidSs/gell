@@ -1040,6 +1040,13 @@ li.footer-bottom__item + li.footer-bottom__item::before{
   &__filters{
     width: 370px;
     margin-right: 30px;
+    transition: all .3s;
+  }
+  &__filter-btn{
+    display: none;
+  }
+  &__filter-img{
+    margin: 0 auto;
   }
 }
 
@@ -2088,12 +2095,12 @@ li.footer-bottom__item + li.footer-bottom__item::before{
 
 .comments-form__text{
   &::after{
-    background-image: url(../images/icons/comments-text.svg);
-    width: 18px;
-    height: 14px;
-    right: 20px;
-    top: -128px;
-    z-index: 5;
+      background-image: url(../images/icons/comments-text.svg);
+      width: 18px;
+      height: 14px;
+      right: 35px;
+      top: 91px;
+      z-index: 5;
   }
 }
 
