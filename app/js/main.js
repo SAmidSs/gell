@@ -85,11 +85,11 @@ $(function () {
         $($('.product__item-box').removeClass('product__item-box--noactive'));
     });
 
-    $('.product__item-box__link').on('click', function () {
-        $(this).addClass('product__item-box__link--noactive');
-        $(this).removeClass('product__item-box__link--noactive');
-        $($('.product-item__btn').removeClass('product-item__btn--noactive'));
-    });
+    // $('.product__item-box__link').on('click', function () {
+    //     $(this).addClass('product__item-box__link--noactive');
+    //     $(this).removeClass('product__item-box__link--noactive');
+    //     $($('.product-item__btn').removeClass('product-item__btn--noactive'));
+    // });
 
 
     // $('.products-item__link-btn--list').on('click', function(){

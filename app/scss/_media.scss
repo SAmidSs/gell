@@ -150,10 +150,40 @@
         &__thumb{
             display: none;
         }
-
+        
+    }
+    .about{
+        &__inner{
+            display: block;
+        }
+        &__img{
+            img{
+                margin: 0 auto;
+            }
+        }
+    }
+    .about-info{
+        max-width: 100%;
+        margin-top: 50px;
+        &__items{
+            &::before{
+                width: 100%;
+            }
+        }
     }
 }
 
+@media (max-width: 1025px){
+    .team{
+        &__inner{
+            display: block;
+        }
+        &__info{
+            max-width: 100%;
+            margin-bottom: 40px;
+        }
+    }
+}
 
 
 @media (max-width: 990px){
@@ -356,6 +386,14 @@
         }
 
     }
+    .rates{
+        &__items{
+            flex-wrap: wrap;
+        }
+        &__item{
+            margin: 0 20px 20px;
+        }
+    }
 }
 
 @media (max-width: 830px){
@@ -429,6 +467,25 @@
         height: 390px;
     }
 }
+@media (max-width: 720px){
+    .team{
+        &__items {
+            background-color: #fdfdfd;
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            grid-gap: 20px 20px;
+            margin-bottom: 50px;
+        }
+        
+    }
+    .team-item{
+        &__img{
+            img{
+                margin: 0 auto;
+            }
+        }
+    }
+}
 
 @media (max-width: 690px){
     .slider{
@@ -477,7 +534,30 @@
             right: 29px;
             top: 41px;
         }
-      }
+    }
+    .about-info{
+        &__title{
+            margin-bottom: 30px;
+            font-size: 31px;
+        }
+        &__working{
+            margin-bottom: 45px;
+        }
+        &__subtitle{
+            margin-bottom: 37px;
+        }
+        &__items{
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        &__item{
+            margin-bottom: 30px;
+        }
+        &__item + .about-info__item{
+            border-left: none;
+            padding-left: 0;
+        }
+    }
 }
 
 @media (max-width: 590px){
@@ -557,6 +637,10 @@
     .comments__info+.comments__info{
         margin-left: 0;
     }
+    .about {
+        padding-top: 60px;
+        margin-bottom: 30px;
+    }
 }
 
 @media (max-width: 440px){
@@ -604,6 +688,20 @@
             margin-bottom: 100px;
         }
 
+    }
+    .about-info{
+        margin-left: 18px;
+    }
+    .rates{
+        &__items {
+            padding: 54px 0 24px;
+        }
+    }
+    .team-item{
+        &__box{
+            width: 289px;
+            height: 85px;
+        }
     }
 }
 
